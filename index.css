@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(12, 22, 22);
+}
+
+li,
+.menu_link,
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 5%;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(2.5px);
+    -webkit-backdrop-filter: blur(2.5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+    width: 50px;
+    height: auto;
+}
+
+.nav_link {
+    list-style: none;
+}
+
+.nav_link li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_link li .menu_link {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_link li .menu_link:hover {
+    color: #0088a9;
+}
+
+.btn {
+    padding: 9px 25px;
+    background-color: rgb(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(0, 136, 169, 0.8);
+    color: white;
+}
+
+.icon {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+/* start Responsive */
+
+@media (max-width: 650px) {
+    .nav_link li {
+        display: none;
+    }
+
+    .btn {
+        display: block;
+        margin-top: 55rem;
+
+    }
+
+    .icon {
+        display: block;
+        color: white;
+        font-weight: 500;
+    }
+
+    .nav_link {
+        position: fixed;
+        width: 25%;
+        height: 90vh;
+        background-color: #2c3e50;
+        top: 90px;
+        left: -100%;
+        text-align: center;
+        color: white;
+        transition: all .5s;
+    }
+
+    .nav_link li {
+        display: block;
+        padding-top: 50px;
+    }
+
+    .nav_link li .menu_link {
+        font-size: 30px;
+    }
+
+    .menu_link:hover,
+    :active {
+        color: #0088a9
+    }
+
+    #check:checked~.nav_link {
+        left: 0%;
+    }
+
+}
